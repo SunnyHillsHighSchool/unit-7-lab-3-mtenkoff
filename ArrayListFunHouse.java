@@ -30,22 +30,16 @@ public class ArrayListFunHouse
  
  public static void keepOnlyCompositeNumbers( List<Integer> nums )
  {
-   //make an Integer ArrayList called factors2
-   ArrayList<Integer> factors2 = new ArrayList<Integer>();
    //make a for loop with a control variable set to 0, while it is less than the size of the array list, increment it 
    for (int x = nums.size()-1; x > -1; x--)
    {
-     //delete all factors in the array list that were saved after checking the last number
-     for (int j = factors2.size()-1; j > -1; j--)
-     {
-       //use the remove method to delete elements
-       factors2.remove(j);
-     }
+      //make an Integer ArrayList called factors2
+      ArrayList<Integer> factors2 = new ArrayList<Integer>();
      //make a for loop that has a control variable set to 2, while the control variable is less than the x, increment it
-     for (int i = 2; i < x; i++)
+     for (int i = 2; i < nums.get(x); i++)
      {
        //if x modulus the control variable is equal to 0
-       if (x % i == 0)
+       if (nums.get(x) % i == 0)
        {
          //add i to factors2
          factors2.add(i);
